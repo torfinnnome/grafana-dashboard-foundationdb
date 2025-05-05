@@ -7,5 +7,5 @@ Use https://github.com/clevercloud/fdbexporter to get data from your fdb cluster
   - job_name: 'fdb_exporter'
     fallback_scrape_protocol: PrometheusText0.0.4
     static_configs:
-      - targets: ['fdb_exporter:9188']
+      - targets: ['fdb_exporter:9090']
 ```
