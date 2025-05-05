@@ -9,3 +9,6 @@ Use https://github.com/clevercloud/fdbexporter to get data from your fdb cluster
     static_configs:
       - targets: ['fdb_exporter:9090']
 ```
+
+![Screenshot 1](sh0t1.png)
+![Screenshot 2](sh0t2.png)
