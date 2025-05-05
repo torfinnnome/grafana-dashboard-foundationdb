@@ -96,7 +96,7 @@
         "percentChangeColorMode": "standard",
         "reduceOptions": {
           "calcs": [
-            "lastNotNull"
+            "min"
           ],
           "fields": "",
           "values": false
@@ -113,10 +113,11 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
+          "exemplar": false,
           "expr": "fdb_cluster_healthy{instance=~\"$instance\"}",
           "instant": true,
           "legendFormat": "Cluster",
-          "range": true,
+          "range": false,
           "refId": "A"
         }
       ],
@@ -201,11 +202,13 @@
             "type": "prometheus",
             "uid": "${datasource}"
           },
-          "editorMode": "code",
+          "editorMode": "builder",
+          "exemplar": false,
           "expr": "fdb_database_available{instance=~\"$instance\"}",
+          "format": "table",
           "instant": true,
           "legendFormat": "Database",
-          "range": true,
+          "range": false,
           "refId": "A"
         }
       ],
@@ -291,10 +294,12 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
+          "exemplar": false,
           "expr": "fdb_database_healthy{instance=~\"$instance\"}",
+          "format": "heatmap",
           "instant": true,
           "legendFormat": "Database",
-          "range": true,
+          "range": false,
           "refId": "A"
         }
       ],
@@ -364,10 +369,12 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
+          "exemplar": false,
           "expr": "fdb_cluster_total_disk_used_bytes{instance=~\"$instance\"}",
+          "format": "table",
           "instant": true,
           "legendFormat": "Total Disk Used",
-          "range": true,
+          "range": false,
           "refId": "A"
         }
       ],
@@ -437,10 +444,12 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
+          "exemplar": false,
           "expr": "fdb_cluster_total_kv_size_bytes{instance=~\"$instance\"}",
+          "format": "time_series",
           "instant": true,
           "legendFormat": "Total KV Size",
-          "range": true,
+          "range": false,
           "refId": "A"
         }
       ],
@@ -510,10 +519,12 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
+          "exemplar": false,
           "expr": "fdb_cluster_least_space_log_server_bytes{instance=~\"$instance\"}",
+          "format": "table",
           "instant": true,
           "legendFormat": "Min Log Server Space",
-          "range": true,
+          "range": false,
           "refId": "A"
         }
       ],
@@ -583,10 +594,12 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
+          "exemplar": false,
           "expr": "fdb_cluster_least_space_storage_server_bytes{instance=~\"$instance\"}",
+          "format": "table",
           "instant": true,
           "legendFormat": "Min Storage Server Space",
-          "range": true,
+          "range": false,
           "refId": "A"
         }
       ],
@@ -1100,10 +1113,12 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
+          "exemplar": false,
           "expr": "fdb_client_quorum_reachable{instance=~\"$instance\"}",
+          "format": "table",
           "instant": true,
           "legendFormat": "Quorum",
-          "range": true,
+          "range": false,
           "refId": "A"
         }
       ],
@@ -3477,5 +3492,5 @@
   "timezone": "",
   "title": "FoundationDB Overview",
   "uid": "fdb-overview-auto",
-  "version": 1
+  "version": 4
 }
